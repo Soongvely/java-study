@@ -1,5 +1,8 @@
 package com.soong.programmers.level1;
 
+import java.util.stream.Collector;
+import java.util.stream.LongStream;
+
 public class 두정수사이의합 {
     /*
     문제 설명
@@ -21,6 +24,8 @@ public class 두정수사이의합 {
     public static void main(String[] args) {
         long result = solution2(5, 3);
         System.out.println(result);
+
+        solution3(1,10);
     }
 
     // solution1
@@ -46,5 +51,11 @@ public class 두정수사이의합 {
         for (int i = min; i <= max; i++) answer += i;
 
         return answer;
+    }
+
+    // solution3
+    public static long solution3(int a, int b) {
+        // Stream : 컬렉션, 배열등의 저장 요소를 하나씩 참조하며 함수형 인터페이스(람다식)를 적용하며 반복적으로 처리할 수 있도록 해주는 기능
+        return LongStream.range(a > b ? b : a, (a > b ? a : b) + 1).sum();
     }
 }
