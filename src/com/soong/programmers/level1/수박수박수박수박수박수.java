@@ -24,6 +24,7 @@ public class 수박수박수박수박수박수 {
         System.out.println(solution3(6));
     }
 
+    // solution1
     public static String solution(int n) {
         String answer = "";
 
@@ -34,6 +35,7 @@ public class 수박수박수박수박수박수 {
         return answer;
     }
 
+    // solution2
     public static String solution2(int n) {
         String answer = "";
 
@@ -43,6 +45,7 @@ public class 수박수박수박수박수박수 {
         return answer;
     }
 
+    // solution3
     public static String solution3(int n) {
 
         return IntStream.range(0, n) // 0 ~ n 까지 들어있는 int타입 Stream 생성
