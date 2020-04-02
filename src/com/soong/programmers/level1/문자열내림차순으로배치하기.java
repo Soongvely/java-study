@@ -17,12 +17,13 @@ public class 문자열내림차순으로배치하기 {
 
     입출력 예)
     str	        return
-    Zbcdefg	    gfedcbZ
+    Zbcdefg	  gfedcbZ
      */
 
     public static void main(String[] args) {
         System.out.println(solution("Zbcdefg"));
-        System.out.println(solution2("aZbcdefg"));
+        System.out.println(solution2("Zbcdefg"));
+        System.out.println(solution3("Zbcdefg"));
     }
 
     // solution1
@@ -30,7 +31,9 @@ public class 문자열내림차순으로배치하기 {
 
         String[] array = str.split("");
 
-        return Arrays.stream(array).sorted(Comparator.reverseOrder()).collect(Collectors.joining());
+        return Arrays.stream(array)
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.joining());
     }
 
     // solution2
@@ -40,6 +43,15 @@ public class 문자열내림차순으로배치하기 {
        Arrays.sort(array, Collections.reverseOrder());
 
        return String.join("", array);
+    }
+
+    // solution3
+    public static String solution3(String str) {
+
+        char[] array = str.toCharArray();
+        Arrays.sort(array);
+
+        return new StringBuilder(new String(array)).reverse().toString();
     }
 
 }
