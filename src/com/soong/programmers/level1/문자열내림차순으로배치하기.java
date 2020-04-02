@@ -17,7 +17,7 @@ public class 문자열내림차순으로배치하기 {
 
     입출력 예)
     str	        return
-    Zbcdefg	 gfedcbZ
+    Zbcdefg	gfedcbZ
      */
 
     public static void main(String[] args) {
