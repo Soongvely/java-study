@@ -49,6 +49,6 @@ public class 문자열내림차순으로배치하기 {
        char[] array = str.toCharArray();
        Arrays.sort(array);
 
-        return new StringBuilder(new String(array)).reverse().toString();
+       return new StringBuilder(new String(array)).reverse().toString();
     }
 }
