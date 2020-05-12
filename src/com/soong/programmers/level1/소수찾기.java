@@ -53,7 +53,6 @@ public class 소수찾기 {
     // solution2
     public static int solution2(int n) {
         int answer = 0;
-
         int[] number = new int[n+1];
 
         // 2부터 n까지의 수를 배열에 담기
@@ -64,8 +63,6 @@ public class 소수찾기 {
         // 2부터 시작해서 그의 배수들을 0으로 set
         // 후에 배열의 i번째 값이 0이면 pass, 아니면 그의 배수들을 다시 0으로 set
         for(int i = 2; i <= n; i++) {
-            System.out.println(Arrays.toString(number) + (i-1) + "번째");
-
             if(number[i] == 0) continue;
 
             for(int j = 2 * i; j <= n; j += i) {
