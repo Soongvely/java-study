@@ -32,8 +32,8 @@ public class 문자열내마음대로정렬하기 {
     */
 
     public static void main(String[] args) {
-        System.out.println(solution(new String[]{"sun", "bed", "car"}, 1));
-        System.out.println(solution2(new String[]{"abce", "abcd", "cdx"}, 2));
+        System.out.println(Arrays.toString(solution(new String[]{"sun", "bed", "car"}, 1)));
+        System.out.println(Arrays.toString(solution2(new String[]{"abce", "abcd", "cdx"}, 2)));
     }
 
     // solution1
@@ -44,7 +44,6 @@ public class 문자열내마음대로정렬하기 {
             else if (o1.charAt(n) < o2.charAt(n)) return -1;
             else return 0;
         });
-        System.out.println("solution1" + Arrays.toString(strings));
 
         return strings;
     }
@@ -61,7 +60,6 @@ public class 문자열내마음대로정렬하기 {
         for (int i = 0; i < list.size(); i++) {
             answer[i] = list.get(i).substring(1);
         }
-        System.out.println("solution2" + Arrays.toString(answer));
 
         return answer;
     }
