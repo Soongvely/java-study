@@ -1,7 +1,5 @@
 package com.soong.programmers.level1;
 
-import java.util.Arrays;
-
 public class 소수찾기 {
     /*
     문제 설명)
